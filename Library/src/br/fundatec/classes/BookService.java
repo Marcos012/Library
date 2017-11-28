@@ -4,7 +4,7 @@ import br.fundatec.interfaces.AddBook;
 import br.fundatec.interfaces.RemoveBook;
 
 public class BookService implements AddBook, RemoveBook{
-
+//ISP + SRP + SINGLETON
 	@Override
 	public void removeBook(Book book) {
 		ListaDeLivrosSingleton.getInstance().getBooks().remove(book);

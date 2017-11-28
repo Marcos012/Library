@@ -1,8 +1,7 @@
 package br.fundatec.classes;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-
+//SINGLETON
 public class ListaDeLivrosSingleton {
 	private static ListaDeLivrosSingleton instance;
 	private ArrayList<Book> books;
