@@ -1,22 +1,21 @@
 package br.fundatec.classes;
 
 public class PublishingHouse {
-	private String name;
-	private String email;
+	private String namePh;
+	private String emailPh;
 	private String telephone;
-	private String website;
-	
-	public String getName() {
-		return name;
+	private String websitePh;
+	public String getNamePh() {
+		return namePh;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNamePh(String namePh) {
+		this.namePh = namePh;
 	}
-	public String getEmail() {
-		return email;
+	public String getEmailPh() {
+		return emailPh;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailPh(String emailPh) {
+		this.emailPh = emailPh;
 	}
 	public String getTelephone() {
 		return telephone;
@@ -24,10 +23,12 @@ public class PublishingHouse {
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
 	}
-	public String getWebsite() {
-		return website;
+	public String getWebsitePh() {
+		return websitePh;
 	}
-	public void setWebsite(String website) {
-		this.website = website;
+	public void setWebsitePh(String websitePh) {
+		this.websitePh = websitePh;
 	}
+	
+	
 }

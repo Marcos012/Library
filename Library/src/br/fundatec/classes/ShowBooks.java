@@ -13,11 +13,13 @@ public class ShowBooks implements Printer{
 		ArrayList<Book> books = ListaDeLivrosSingleton.getInstance().getBooks();
 		
 		for (Book book : books) {
-			System.out.println(book.getTitle() + " " + 
-			book.getIsbn() + " " + 
-			book.getEditionNumber() + " " + 
-			book.getPublicationYear() + " " + 
-			book.getPages());
+			System.out.println("Titulo: " + book.getTitle() + "\nISBN: " + 
+			book.getIsbn() + " \nNumero de paginas:" + 
+			book.getPages() + " \nNumero da edição" +
+			book.getEditionNumber() + " \nAno de puclicação: " + 
+			book.getPublicationYear() + " \nAutor: " +
+			book.getAuthor() + " \nEditora: " +
+			book.getPhouse());
 		}
 		
 		

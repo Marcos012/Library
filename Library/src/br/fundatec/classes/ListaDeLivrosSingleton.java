@@ -4,10 +4,10 @@ import java.util.ArrayList;
 //SINGLETON
 public class ListaDeLivrosSingleton {
 	private static ListaDeLivrosSingleton instance;
-	private ArrayList<Book> books;
+	private ArrayList<Book> books = null;
 	
 	private ListaDeLivrosSingleton() {
-		
+		books = new ArrayList<Book>();
 	} 
 	
 	public static ListaDeLivrosSingleton getInstance() {

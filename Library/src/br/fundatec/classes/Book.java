@@ -6,7 +6,21 @@ public class Book {
 	private int pages;
 	private int publicationYear; 
 	private int editionNumber;
+	private Author author;
+	private PublishingHouse phouse;
 	
+	public Author getAuthor() {
+		return author;
+	}
+	public void setAuthor(Author author) {
+		this.author = author;
+	}
+	public PublishingHouse getPhouse() {
+		return phouse;
+	}
+	public void setPhouse(PublishingHouse phouse) {
+		this.phouse = phouse;
+	}
 	public String getTitle() {
 		return title;
 	}
