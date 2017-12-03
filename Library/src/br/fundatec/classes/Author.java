@@ -24,4 +24,7 @@ public class Author {
 		this.website = website;
 	}
 	
+	public String toString(){
+		return name;
+	}
 }

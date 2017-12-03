@@ -5,6 +5,7 @@ public class PublishingHouse {
 	private String emailPh;
 	private String telephone;
 	private String websitePh;
+	
 	public String getNamePh() {
 		return namePh;
 	}
@@ -29,6 +30,7 @@ public class PublishingHouse {
 	public void setWebsitePh(String websitePh) {
 		this.websitePh = websitePh;
 	}
-	
-	
+	public String toString(){
+		return namePh;
+	}
 }

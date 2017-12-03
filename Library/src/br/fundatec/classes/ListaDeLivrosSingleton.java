@@ -1,12 +1,13 @@
 package br.fundatec.classes;
 
 import java.util.ArrayList;
+
 //SINGLETON
 public class ListaDeLivrosSingleton {
 	private static ListaDeLivrosSingleton instance;
 	private ArrayList<Book> books = null;
 	
-	private ListaDeLivrosSingleton() {
+	 ListaDeLivrosSingleton() {
 		books = new ArrayList<Book>();
 	} 
 	
@@ -17,13 +18,17 @@ public class ListaDeLivrosSingleton {
 		return instance;
 	}
 	
-	//set
-	public void setBook(ArrayList<Book> newBooks) {
-		this.books = newBooks;
+	//Set
+	public void setBook(ArrayList<Book> books) {
+		this.books = books;
 	}
 	
-	//get
+	//Get
 	public ArrayList<Book> getBooks(){
 		return this.books;
 	}
+	
 }
+	
+	
+

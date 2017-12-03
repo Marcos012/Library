@@ -2,28 +2,29 @@ package br.fundatec.classes;
 
 import java.util.Scanner;
 
-//FALTA COLOCAR NO ARRAY O AUTOR E A EDITORA (FEITOOOOOOOOOOOOOO)
-//FALTA UM PATTERN DO SOLID
 public class Main {
 	public static void main(String[] args) {
 		
 		Scanner entrada = new Scanner(System.in);	
 		int opcaoDigitada; 
 		
+		
+		
+		Book book = new Book();
 		BookService bs = new BookService();
 		ShowBooks sb = new ShowBooks();
-		
+	
 			do {
 				System.out.println("1 - Adicionar \n2 - Remover \n3 - Relatorio \n0 - Fim");
 				opcaoDigitada = entrada.nextInt();
 				
 				switch (opcaoDigitada) {
 					case 1:
-						System.out.println("Entre com Titulo:");
-						String title = entrada.nextLine();
+						System.out.println("Entre com o titulo:");
+						String title = entrada.next();
 						
 						System.out.println("Entre com o ISBN:");
-						String isbn = entrada.nextLine();
+						String isbn = entrada.next();
 						
 						System.out.println("Entre com o numero de paginas:");
 						int pages = entrada.nextInt();
@@ -35,50 +36,57 @@ public class Main {
 						int editionNumber = entrada.nextInt();
 						
 						System.out.println("Entre com o nome do autor:");
-						String name = entrada.nextLine();
+						String name = entrada.next();
 						
 						System.out.println("Entre com o email do autor:");
-						String email = entrada.nextLine();
+						String email = entrada.next();
 						
 						System.out.println("Entre com website do autor:");
-						String website = entrada.nextLine();
+						String website = entrada.next();
 						
 						System.out.println("Entre com o nome da Editora:");
-						String namePh = entrada.nextLine();
+						String namePh = entrada.next();
 						
 						System.out.println("Entre com email da editora:");
-						String emailPh = entrada.nextLine();
+						String emailPh = entrada.next();
 						
 						System.out.println("Entre com o telefone da editora:");
-						String telephone = entrada.nextLine();
+						String telephone = entrada.next();
 						
 						System.out.println("Entre com website da editora:");
-						String websitePh = entrada.nextLine();
+						String websitePh = entrada.next();
 								
 						BookFactory bf = new BookFactory();
 						
-						Book book = bf.buildBook(title, isbn, pages, publicationYear, editionNumber,
-												name, email, website,
+						book = bf.buildBook(title, isbn, pages, publicationYear, editionNumber,
+												name,email, website,
 												namePh, emailPh, telephone, websitePh);
+						System.out.println("\nLivro adicionado!\n");
 						
 						bs.addBook(book);
 						sb.printBook();
 						
 						break;
-					
 					case 2:
-						sb.printBook();
+						System.out.println("Entre com o titulo do livro:");
+						title = entrada.next();
+						bs.removeBook(book);
+						
 						break;
 						
 					case 3:
+						sb.printBook();
 						
 						break;
+						
 					case 0:
+						System.out.println("Obrigado");
 						
 						break;
 						
 					default:
-						System.out.println("Opção inválida!!"); 
+						System.out.println("Opção inválida!");
+						
 						break;
 				}
 			}while (opcaoDigitada != 0);
